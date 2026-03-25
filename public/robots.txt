@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Protect draft or build artifacts
+Disallow: /node_modules/
+Disallow: /dist/
+
+Sitemap: https://freshbite.ng/sitemap.xml
+Host: https://freshbite.ng

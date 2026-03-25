@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Sora:wght@300;400;500;600&family=Space+Grotesk:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #f7f3ed;
+  background-color: #0a120d;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a120d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(248, 243, 237, 0.05), transparent 65%), #0a120d;
+  color: #f7f3ed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(200, 147, 60, 0.4);
+  color: #0e1c16;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Playfair Display', serif;
+    color: #f7f3ed;
+  }
+
+  p {
+    color: rgba(247, 243, 237, 0.86);
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-3xl bg-white/5 p-6 shadow-glow border border-white/10 backdrop-blur;
+  }
+  .frosted-panel {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl;
+  }
+}
+
+@layer utilities {
+  .grid-overlay {
+    background-image: linear-gradient(transparent 95%, rgba(255, 255, 255, 0.05) 95%),
+      linear-gradient(90deg, transparent 95%, rgba(255, 255, 255, 0.05) 95%);
+    background-size: 60px 60px;
+  }
+}
+
+.shine-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.shine-card::after {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 35%, rgba(255, 255, 255, 0.45) 50%, transparent 75%);
+  transform: translateX(-160%) rotate(18deg);
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.shine-card:hover::after,
+.shine-card:focus-within::after {
+  transform: translateX(160%) rotate(18deg);
+  opacity: 0.7;
+}
+
+.shine-card img,
+.shine-card picture,
+.shine-card video {
+  transition: transform 0.9s ease;
+}
+
+.shine-card:hover img,
+.shine-card:hover picture,
+.shine-card:hover video,
+.shine-card:focus-within img,
+.shine-card:focus-within picture,
+.shine-card:focus-within video {
+  transform: scale(1.03);
+}
+
+.parallax-card {
+  transform: perspective(1100px) rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+@media (hover: none) {
+  .parallax-card {
+    transform: none !important;
+  }
+
+  .shine-card::after {
+    opacity: 0.4;
+    transform: none;
+  }
+}
