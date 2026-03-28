@@ -76,6 +76,8 @@ export const MENU_CATEGORIES = [
         description: '32-day ribeye, suya jus, charred leeks, bone marrow gremolata.',
         price: '₦34,800',
         badges: ['For two'],
+        image:
+          'https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=900&q=80',
       },
     ],
   },
@@ -97,12 +99,16 @@ export const MENU_CATEGORIES = [
         description: 'Palm wine caramel, hibiscus granita, almond tuille.',
         price: '₦9,800',
         badges: ['Gluten-free'],
+        image:
+          'https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80',
       },
       {
         title: 'Olive Oil Tiramisu',
         description: 'Keregbe espresso soak, mascarpone chantilly, cocoa nibs.',
         price: '₦10,400',
         badges: ['Classic'],
+        image:
+          'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=80',
       },
     ],
   },
@@ -116,12 +122,16 @@ export const MENU_CATEGORIES = [
         description: 'Smoked Campari, cocoa nib vermouth, gin, orange oil.',
         price: '₦9,500',
         badges: ['House'],
+        image:
+          'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80',
       },
       {
         title: 'Palm Spritz',
         description: 'Palm wine reduction, prosecco, grapefruit bitters.',
         price: '₦8,200',
         badges: ['Light'],
+        image:
+          'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80',
       },
       {
         title: 'Non-Alcoholic Flight',

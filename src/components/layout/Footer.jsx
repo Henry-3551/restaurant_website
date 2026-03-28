@@ -6,7 +6,7 @@ const Footer = () => {
           <p className="text-base font-semibold text-white">FreshBite Kitchen</p>
           <p>Lagos · Nigeria</p>
         </div>
-        <p className="text-xs text-white/50">© {new Date().getFullYear()} FreshBite Kitchen. Crafted for intimate dining.</p>
+        <p className="text-xs text-white/50">© {new Date().getFullYear()} FreshBite Kitchen. Crafted with ❤️ by Henrify.dev.</p>
       </div>
     </footer>
   )
