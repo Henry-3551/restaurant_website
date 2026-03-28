@@ -37,6 +37,8 @@ export const MENU_CATEGORIES = [
         description: 'Plantain risotto spheres, nduja aioli, pickled okra.',
         price: '₦14,200',
         badges: ['Spiced'],
+        image:
+          'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=900&q=80',
       },
       {
         title: 'Heirloom Tomato Crudo',
